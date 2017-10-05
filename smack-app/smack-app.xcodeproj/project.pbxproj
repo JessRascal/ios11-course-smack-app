@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B2C4C10911EB8A3B46E16F7C /* Pods_smack_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17869A46C37DF206BB2E0049 /* Pods_smack_app.framework */; };
+		C830289E1F86D8FD00F30F4B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830289D1F86D8FD00F30F4B /* AuthService.swift */; };
 		C88085CB1F857F2400E5823B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085CA1F857F2400E5823B /* AppDelegate.swift */; };
 		C88085D01F857F2400E5823B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88085CE1F857F2400E5823B /* Main.storyboard */; };
 		C88085D21F857F2400E5823B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88085D11F857F2400E5823B /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		17869A46C37DF206BB2E0049 /* Pods_smack_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smack_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		301909D2C8654C606F3D8F38 /* Pods-smack-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smack-app/Pods-smack-app.debug.xcconfig"; sourceTree = "<group>"; };
+		C830289D1F86D8FD00F30F4B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C88085C71F857F2300E5823B /* smack-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smack-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88085CA1F857F2400E5823B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88085CF1F857F2400E5823B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C830289C1F86D8E900F30F4B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C830289D1F86D8FD00F30F4B /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C88085BE1F857F2300E5823B = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		C88085C91F857F2300E5823B /* smack-app */ = {
 			isa = PBXGroup;
 			children = (
+				C830289C1F86D8E900F30F4B /* Services */,
 				C88085EB1F86B4EB00E5823B /* Utilities */,
 				C88085E01F8608F500E5823B /* Model */,
 				C88085E11F8608FC00E5823B /* View */,
@@ -289,6 +300,7 @@
 				C88085F11F86BB8700E5823B /* CreateAccVC.swift in Sources */,
 				C88085E41F86093000E5823B /* ChatVC.swift in Sources */,
 				C88085E61F86094100E5823B /* ChannelVC.swift in Sources */,
+				C830289E1F86D8FD00F30F4B /* AuthService.swift in Sources */,
 				C88085EF1F86B9F500E5823B /* LoginVC.swift in Sources */,
 				C88085E91F860FAE00E5823B /* GradientView.swift in Sources */,
 				C88085CB1F857F2400E5823B /* AppDelegate.swift in Sources */,
