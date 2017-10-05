@@ -18,6 +18,7 @@
 		C88085E91F860FAE00E5823B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085E81F860FAE00E5823B /* GradientView.swift */; };
 		C88085ED1F86B4FD00E5823B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085EC1F86B4FD00E5823B /* Constants.swift */; };
 		C88085EF1F86B9F500E5823B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085EE1F86B9F500E5823B /* LoginVC.swift */; };
+		C88085F11F86BB8700E5823B /* CreateAccVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085F01F86BB8700E5823B /* CreateAccVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C88085E81F860FAE00E5823B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C88085EC1F86B4FD00E5823B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C88085EE1F86B9F500E5823B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C88085F01F86BB8700E5823B /* CreateAccVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccVC.swift; sourceTree = "<group>"; };
 		F1939109B86ED5A6131B07C5 /* Pods-smack-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-smack-app/Pods-smack-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 				C88085E31F86093000E5823B /* ChatVC.swift */,
 				C88085E51F86094100E5823B /* ChannelVC.swift */,
 				C88085EE1F86B9F500E5823B /* LoginVC.swift */,
+				C88085F01F86BB8700E5823B /* CreateAccVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88085F11F86BB8700E5823B /* CreateAccVC.swift in Sources */,
 				C88085E41F86093000E5823B /* ChatVC.swift in Sources */,
 				C88085E61F86094100E5823B /* ChannelVC.swift in Sources */,
 				C88085EF1F86B9F500E5823B /* LoginVC.swift in Sources */,

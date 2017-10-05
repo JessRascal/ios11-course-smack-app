@@ -1,5 +1,5 @@
 //
-//  LoginVC.swift
+//  CreateAccVC.swift
 //  smack-app
 //
 //  Created by Jess Rascal on 05/10/2017.
@@ -8,17 +8,13 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class CreateAccVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func closePressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func createAccBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_CREATE_ACC_VC, sender: nil)
+        performSegue(withIdentifier: UNWIND_TO_CHANNEL_VC, sender: nil)
     }
 }
