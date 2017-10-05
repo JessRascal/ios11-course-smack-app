@@ -15,6 +15,7 @@
 		C88085E41F86093000E5823B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085E31F86093000E5823B /* ChatVC.swift */; };
 		C88085E61F86094100E5823B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085E51F86094100E5823B /* ChannelVC.swift */; };
 		C88085E71F860C7700E5823B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88085DE1F858AF800E5823B /* SWRevealViewController.m */; };
+		C88085E91F860FAE00E5823B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085E81F860FAE00E5823B /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C88085DF1F858AF800E5823B /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C88085E31F86093000E5823B /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C88085E51F86094100E5823B /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		C88085E81F860FAE00E5823B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F1939109B86ED5A6131B07C5 /* Pods-smack-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-smack-app/Pods-smack-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		C88085E11F8608FC00E5823B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C88085E81F860FAE00E5823B /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				C88085E41F86093000E5823B /* ChatVC.swift in Sources */,
 				C88085E61F86094100E5823B /* ChannelVC.swift in Sources */,
+				C88085E91F860FAE00E5823B /* GradientView.swift in Sources */,
 				C88085CB1F857F2400E5823B /* AppDelegate.swift in Sources */,
 				C88085E71F860C7700E5823B /* SWRevealViewController.m in Sources */,
 			);
