@@ -109,15 +109,7 @@ class AuthService {
         Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER_AUTH).responseJSON { (response) in
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    guard
-                        let id = json["_id"] as? String,
-                        let avatarColor = json["avatarColor"] as? String,
-                        let avatarName = json["avatarName"] as? String,
-                        let email = json["email"] as? String,
-                        let name = json["name"] as? String
-                        else { return }
-                    
-                    UserDataService.instance.setUserData(id: id, avatarColor: avatarColor, avatarName: avatarName, email: email, name: name)
+                    self.setUserData(json: json)
                     completion(true)
                 }
             } else {
@@ -125,6 +117,32 @@ class AuthService {
                 print(response.result.error as Any)
             }
         }
+    }
+    
+    func findUserByEmail(completion: @escaping CompletionHandler) {
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER_AUTH).responseJSON { (response) in
+            if response.result.error == nil {
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    self.setUserData(json: json)
+                    completion(true)
+                }
+            } else {
+                completion(false)
+                print(response.result.error as Any)
+            }
+        }
+    }
+    
+    func setUserData(json: Dictionary<String, Any>) {
+        guard
+            let id = json["_id"] as? String,
+            let avatarColor = json["avatarColor"] as? String,
+            let avatarName = json["avatarName"] as? String,
+            let email = json["email"] as? String,
+            let name = json["name"] as? String
+            else { return }
+        
+        UserDataService.instance.setUserData(id: id, avatarColor: avatarColor, avatarName: avatarName, email: email, name: name)
     }
     
 }

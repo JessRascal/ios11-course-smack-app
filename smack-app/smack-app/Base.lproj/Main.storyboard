@@ -196,7 +196,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="waz-ai-yjR">
                                 <rect key="frame" x="62.5" y="160" width="250" height="94"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-fa-pY3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-fa-pY3">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Hpu-PJ-sYO"/>
@@ -243,11 +243,19 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="mW6-Mj-PaK" eventType="touchUpInside" id="4CC-7Q-4EX"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hAC-88-UU0">
+                                <rect key="frame" x="169" y="255" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IPV-6s-v9O" firstAttribute="top" secondItem="pU1-gZ-avD" secondAttribute="bottom" id="5a8-To-xTE"/>
+                            <constraint firstItem="hAC-88-UU0" firstAttribute="centerY" secondItem="552-ga-5yG" secondAttribute="centerY" constant="-60" id="7Qo-yC-myS"/>
                             <constraint firstItem="pU1-gZ-avD" firstAttribute="centerX" secondItem="552-ga-5yG" secondAttribute="centerX" id="Cox-3g-R6K"/>
                             <constraint firstItem="Gw5-ul-RsW" firstAttribute="trailing" secondItem="552-ga-5yG" secondAttribute="trailingMargin" id="D99-52-BCv"/>
                             <constraint firstItem="waz-ai-yjR" firstAttribute="centerX" secondItem="552-ga-5yG" secondAttribute="centerX" id="IWB-SL-Ewz"/>
@@ -256,10 +264,14 @@
                             <constraint firstItem="Gw5-ul-RsW" firstAttribute="top" secondItem="3gj-so-wEe" secondAttribute="bottom" constant="8" id="eKk-QC-IHE"/>
                             <constraint firstItem="LtB-yd-ks7" firstAttribute="centerX" secondItem="552-ga-5yG" secondAttribute="centerX" id="fna-Xo-PI2"/>
                             <constraint firstItem="waz-ai-yjR" firstAttribute="top" secondItem="LtB-yd-ks7" secondAttribute="bottom" constant="40" id="rSk-1s-jhj"/>
+                            <constraint firstItem="hAC-88-UU0" firstAttribute="centerX" secondItem="552-ga-5yG" secondAttribute="centerX" id="tW1-jw-4mS"/>
                             <constraint firstItem="LtB-yd-ks7" firstAttribute="top" secondItem="3gj-so-wEe" secondAttribute="bottom" constant="60" id="zCn-0n-VfV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="hAC-88-UU0" id="6vg-N3-GWq"/>
+                        <outlet property="emailText" destination="e2n-fa-pY3" id="vOE-Ll-5k8"/>
+                        <outlet property="passwordText" destination="sko-db-PVr" id="kSy-aU-nRP"/>
                         <segue destination="1XF-Fs-kU6" kind="show" identifier="toCreateAccVC" id="gjq-jB-rn8"/>
                     </connections>
                 </viewController>
@@ -400,7 +412,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wzk-WE-BlG">
-                                <rect key="frame" x="169" y="285" width="37" height="37"/>
+                                <rect key="frame" x="169" y="255" width="37" height="37"/>
                                 <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -409,7 +421,7 @@
                             <constraint firstItem="CAI-BJ-MRq" firstAttribute="top" secondItem="xyM-AL-gyn" secondAttribute="bottom" constant="8" id="8Fo-Sl-h5B"/>
                             <constraint firstItem="SRy-hW-gUd" firstAttribute="width" secondItem="NUs-9t-3g3" secondAttribute="width" id="J37-zO-xO7"/>
                             <constraint firstItem="6yH-RV-KwK" firstAttribute="top" secondItem="xyM-AL-gyn" secondAttribute="bottom" constant="40" id="J7O-iE-bKP"/>
-                            <constraint firstItem="wzk-WE-BlG" firstAttribute="centerY" secondItem="jgq-bM-lca" secondAttribute="centerY" constant="-30" id="JJG-eC-rP5"/>
+                            <constraint firstItem="wzk-WE-BlG" firstAttribute="centerY" secondItem="jgq-bM-lca" secondAttribute="centerY" constant="-60" id="JJG-eC-rP5"/>
                             <constraint firstItem="6yH-RV-KwK" firstAttribute="centerX" secondItem="jgq-bM-lca" secondAttribute="centerX" id="LsP-de-gxF"/>
                             <constraint firstItem="Va9-3M-fzw" firstAttribute="top" secondItem="SRy-hW-gUd" secondAttribute="bottom" constant="8" id="MYC-H5-0Hi"/>
                             <constraint firstItem="SRy-hW-gUd" firstAttribute="top" secondItem="NUs-9t-3g3" secondAttribute="top" constant="-15" id="O6E-gq-C1m"/>
