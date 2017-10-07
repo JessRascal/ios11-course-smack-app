@@ -19,7 +19,7 @@ class AvatarCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUpView()
+        setupView()
     }
     
     func configureCell(index: Int, type: AvatarType) {
@@ -32,7 +32,7 @@ class AvatarCell: UICollectionViewCell {
         }
     }
     
-    func setUpView() {
+    func setupView() {
         self.layer.backgroundColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 10
         self.clipsToBounds = true

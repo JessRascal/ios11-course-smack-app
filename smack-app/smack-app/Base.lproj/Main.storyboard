@@ -65,7 +65,7 @@
                                 <rect key="frame" x="265" y="87" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-ps-r7A">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-ps-r7A" customClass="CircleImage" customModule="smack_app" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="dmJ-ob-DVE"/>
@@ -376,7 +376,7 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NUs-9t-3g3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NUs-9t-3g3" customClass="CircleImage" customModule="smack_app" customModuleProvider="target">
                                 <rect key="frame" x="137" y="329" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6l9-uC-9ae"/>
@@ -398,17 +398,23 @@
                                     <action selector="pickBgColorPressed:" destination="1XF-Fs-kU6" eventType="touchUpInside" id="8hj-hL-AKT"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wzk-WE-BlG">
+                                <rect key="frame" x="169" y="285" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CAI-BJ-MRq" firstAttribute="top" secondItem="xyM-AL-gyn" secondAttribute="bottom" constant="8" id="8Fo-Sl-h5B"/>
                             <constraint firstItem="SRy-hW-gUd" firstAttribute="width" secondItem="NUs-9t-3g3" secondAttribute="width" id="J37-zO-xO7"/>
                             <constraint firstItem="6yH-RV-KwK" firstAttribute="top" secondItem="xyM-AL-gyn" secondAttribute="bottom" constant="40" id="J7O-iE-bKP"/>
+                            <constraint firstItem="wzk-WE-BlG" firstAttribute="centerY" secondItem="jgq-bM-lca" secondAttribute="centerY" constant="-30" id="JJG-eC-rP5"/>
                             <constraint firstItem="6yH-RV-KwK" firstAttribute="centerX" secondItem="jgq-bM-lca" secondAttribute="centerX" id="LsP-de-gxF"/>
                             <constraint firstItem="Va9-3M-fzw" firstAttribute="top" secondItem="SRy-hW-gUd" secondAttribute="bottom" constant="8" id="MYC-H5-0Hi"/>
                             <constraint firstItem="SRy-hW-gUd" firstAttribute="top" secondItem="NUs-9t-3g3" secondAttribute="top" constant="-15" id="O6E-gq-C1m"/>
                             <constraint firstItem="CAI-BJ-MRq" firstAttribute="trailing" secondItem="jgq-bM-lca" secondAttribute="trailingMargin" id="OLH-yR-dMV"/>
                             <constraint firstItem="fsf-vh-uih" firstAttribute="centerX" secondItem="jgq-bM-lca" secondAttribute="centerX" id="SLE-Ku-cY7"/>
+                            <constraint firstItem="wzk-WE-BlG" firstAttribute="centerX" secondItem="jgq-bM-lca" secondAttribute="centerX" id="a2N-Jc-F2M"/>
                             <constraint firstItem="wdK-LQ-dBb" firstAttribute="top" secondItem="uVV-NI-l3e" secondAttribute="bottom" constant="40" id="c2U-7f-6un"/>
                             <constraint firstItem="NUs-9t-3g3" firstAttribute="top" secondItem="fsf-vh-uih" secondAttribute="bottom" constant="55" id="gmI-aH-u8k"/>
                             <constraint firstItem="uVV-NI-l3e" firstAttribute="centerX" secondItem="jgq-bM-lca" secondAttribute="centerX" id="n6c-BM-Q2T"/>
@@ -419,6 +425,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="wzk-WE-BlG" id="mN1-lm-71K"/>
                         <outlet property="emailText" destination="7yk-Ci-hH6" id="BuV-K3-lkU"/>
                         <outlet property="passwordText" destination="RQj-MV-bBF" id="c5N-zK-Oa8"/>
                         <outlet property="userImg" destination="NUs-9t-3g3" id="fbX-P2-4CR"/>
