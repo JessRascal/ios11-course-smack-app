@@ -420,9 +420,9 @@
                     </view>
                     <connections>
                         <outlet property="emailText" destination="7yk-Ci-hH6" id="BuV-K3-lkU"/>
-                        <outlet property="passwordText" destination="7yk-Ci-hH6" id="xTj-jo-NNZ"/>
+                        <outlet property="passwordText" destination="RQj-MV-bBF" id="c5N-zK-Oa8"/>
                         <outlet property="userImg" destination="NUs-9t-3g3" id="fbX-P2-4CR"/>
-                        <outlet property="usernameText" destination="7yk-Ci-hH6" id="XqZ-wO-M8U"/>
+                        <outlet property="usernameText" destination="4te-Lq-H2G" id="I1J-yG-PBr"/>
                         <segue destination="z8u-BM-8PT" kind="unwind" identifier="unwindToChannelVC" unwindAction="prepareForUnwindWithSegue:" id="ruN-K4-kRu"/>
                     </connections>
                 </viewController>
