@@ -23,6 +23,13 @@ class CreateAccVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
+    
     @IBAction func createAccPressed(_ sender: Any) {
         guard let name = usernameText.text, usernameText.text != "" else { return }
         guard let email = emailText.text, emailText.text != "" else { return }
