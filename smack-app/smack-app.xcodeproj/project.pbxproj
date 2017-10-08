@@ -29,6 +29,7 @@
 		C8B360271F89734B00258C96 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B360251F89734B00258C96 /* ProfileVC.xib */; };
 		C8B3602A1F8A320800258C96 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B360291F8A320800258C96 /* MessageService.swift */; };
 		C8B3602C1F8A323800258C96 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B3602B1F8A323800258C96 /* Channel.swift */; };
+		C8B3602E1F8A3C1300258C96 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B3602D1F8A3C1300258C96 /* ChannelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		C8B360251F89734B00258C96 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		C8B360291F8A320800258C96 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		C8B3602B1F8A323800258C96 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		C8B3602D1F8A3C1300258C96 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		F1939109B86ED5A6131B07C5 /* Pods-smack-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-smack-app/Pods-smack-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				C8408CCE1F874DC40082BD1F /* RoundedButton.swift */,
 				C8408CD41F892C020082BD1F /* AvatarCell.swift */,
 				C8408CD61F8942440082BD1F /* CircleImage.swift */,
+				C8B3602D1F8A3C1300258C96 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B360261F89734B00258C96 /* ProfileVC.swift in Sources */,
+				C8B3602E1F8A3C1300258C96 /* ChannelCell.swift in Sources */,
 				C88085F11F86BB8700E5823B /* CreateAccVC.swift in Sources */,
 				C8408CD31F8929A80082BD1F /* AvatarPickerVC.swift in Sources */,
 				C8408CCF1F874DC40082BD1F /* RoundedButton.swift in Sources */,
