@@ -560,7 +560,7 @@
                         <viewControllerLayoutGuide type="top" id="zS7-wh-HXu"/>
                         <viewControllerLayoutGuide type="bottom" id="z0B-QU-Ztz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZYZ-Wg-93k">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="ZYZ-Wg-93k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -591,17 +591,39 @@
                                     <constraint firstItem="X5N-bU-Lho" firstAttribute="centerX" secondItem="Sbr-Cd-VZm" secondAttribute="centerX" id="iwQ-9w-OAI"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="say something..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-4B-EFG">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NHB-9e-5ma"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3O-dO-bfs">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendMsgPressed:" destination="ui7-5n-D1i" eventType="touchUpInside" id="oOW-Ep-Ap1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vCh-4B-EFG" secondAttribute="trailing" id="12t-tj-Rzl"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="71S-lQ-Fog"/>
+                            <constraint firstItem="b3O-dO-bfs" firstAttribute="centerY" secondItem="vCh-4B-EFG" secondAttribute="centerY" id="I2j-jz-yqG"/>
+                            <constraint firstItem="z0B-QU-Ztz" firstAttribute="top" secondItem="vCh-4B-EFG" secondAttribute="bottom" id="PVt-wf-EzD"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="top" secondItem="ZYZ-Wg-93k" secondAttribute="top" id="R3Q-fH-Ile"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="trailing" secondItem="ZYZ-Wg-93k" secondAttribute="trailing" id="TKQ-eR-D1E"/>
+                            <constraint firstAttribute="trailing" secondItem="b3O-dO-bfs" secondAttribute="trailing" constant="8" id="eKl-ur-WgF"/>
+                            <constraint firstItem="vCh-4B-EFG" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="jBs-gM-S0H"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="channelNameLbl" destination="X5N-bU-Lho" id="XsO-vg-s2x"/>
                         <outlet property="menuBtn" destination="IU9-6J-ja4" id="Koi-3x-6fx"/>
+                        <outlet property="messageTextField" destination="vCh-4B-EFG" id="CcR-fb-Rbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NtE-qR-ntU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -613,6 +635,7 @@
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>

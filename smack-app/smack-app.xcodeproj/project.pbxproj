@@ -15,6 +15,7 @@
 		C8408CD31F8929A80082BD1F /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8408CD21F8929A80082BD1F /* AvatarPickerVC.swift */; };
 		C8408CD51F892C020082BD1F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8408CD41F892C020082BD1F /* AvatarCell.swift */; };
 		C8408CD71F8942440082BD1F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8408CD61F8942440082BD1F /* CircleImage.swift */; };
+		C8681B9C1F8BF6FD000123BB /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8681B9B1F8BF6FD000123BB /* KeyboardBoundView.swift */; };
 		C88085CB1F857F2400E5823B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88085CA1F857F2400E5823B /* AppDelegate.swift */; };
 		C88085D01F857F2400E5823B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88085CE1F857F2400E5823B /* Main.storyboard */; };
 		C88085D21F857F2400E5823B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88085D11F857F2400E5823B /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		C8408CD21F8929A80082BD1F /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		C8408CD41F892C020082BD1F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C8408CD61F8942440082BD1F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		C8681B9B1F8BF6FD000123BB /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		C88085C71F857F2300E5823B /* smack-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smack-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88085CA1F857F2400E5823B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88085CF1F857F2400E5823B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				C8408CD41F892C020082BD1F /* AvatarCell.swift */,
 				C8408CD61F8942440082BD1F /* CircleImage.swift */,
 				C8B3602D1F8A3C1300258C96 /* ChannelCell.swift */,
+				C8681B9B1F8BF6FD000123BB /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8681B9C1F8BF6FD000123BB /* KeyboardBoundView.swift in Sources */,
 				C8A5D4471F8A5BD3009759E9 /* SocketService.swift in Sources */,
 				C8B360261F89734B00258C96 /* ProfileVC.swift in Sources */,
 				C8B3602E1F8A3C1300258C96 /* ChannelCell.swift in Sources */,
