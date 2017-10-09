@@ -70,8 +70,6 @@ class AuthService {
         ]
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                
-                // Swift Method
                 if let json = response.result.value as? Dictionary<String, Any> {
                     if let email = json["user"] as? String {
                         self.userEmail = email
@@ -80,13 +78,6 @@ class AuthService {
                         self.authToken = token
                     }
                 }
-                
-                // SwiftyJSON Method
-                //                guard let data = response.data else { return }
-                //                let json = JSON(data: data)
-                //                self.userEmail = json["user"].stringValue
-                //                self.authToken = json["token"].stringValue
-                
                 self.isLoggedIn = true
                 completion(true)
             } else {
@@ -146,17 +137,3 @@ class AuthService {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
