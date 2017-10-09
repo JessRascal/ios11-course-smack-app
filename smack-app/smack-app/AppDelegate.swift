@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        SocketService.instance.
+        SocketService.instance.closeConnection()
     }
 
 
