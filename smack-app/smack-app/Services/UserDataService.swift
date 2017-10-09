@@ -29,7 +29,7 @@ class UserDataService {
         self.avatarName = name
     }
     
-    func returnUIcolor(components: String) -> UIColor {
+    func returnUIColor(components: String) -> UIColor {
         
         let scanner = Scanner(string: components)
         let skipped = CharacterSet(charactersIn: "[], ")
