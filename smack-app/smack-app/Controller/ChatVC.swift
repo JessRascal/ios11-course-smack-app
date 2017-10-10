@@ -155,7 +155,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if success {
                     self.messageTextField.text = ""
                     self.messageTextField.resignFirstResponder()
-//                    self.sendBtn.isHidden = true
+                    self.sendBtn.isHidden = true
                     SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
                 }
             })
@@ -164,17 +164,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func messagefieldEditing(_ sender: Any) {
         guard let channelId = MessageService.instance.selectedChannel?._id else { return }
-        
         if messageTextField.text == "" {
             isTyping = false
             sendBtn.isHidden = true
             SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
         } else {
-            if isTyping == false {
-                sendBtn.isHidden = false
-                SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
-            }
             isTyping = true
+            sendBtn.isHidden = false
+            SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
         }
     }
     
