@@ -17,6 +17,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var typingLbl: UILabel!
     @IBOutlet weak var infoLbl: UILabel!
+    @IBOutlet weak var typingLblView: UIView!
     
     var isTyping = false
     
@@ -30,6 +31,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         sendBtn.isHidden = true
+        typingLblView.isHidden = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         self.view.addGestureRecognizer(tap)
@@ -69,12 +71,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
             if numberOfTypers > 0 && AuthService.instance.isLoggedIn {
+                self.typingLblView.isHidden = false
                 var verb = "is"
                 if numberOfTypers > 1 {
                     verb = "are"
                 }
                 self.typingLbl.text = "\(names) \(verb) typing..."
             } else {
+                self.typingLblView.isHidden = true
                 self.typingLbl.text = ""
             }
         }

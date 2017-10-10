@@ -650,7 +650,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lxb-Ky-wXr">
-                                <rect key="frame" x="0.0" y="77" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="77" width="375" height="550"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="Z29-fo-XZd" customClass="MessageCell" customModule="smack_app" customModuleProvider="target">
@@ -709,12 +709,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmA-Af-lQC">
-                                <rect key="frame" x="8" y="621" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-kw-kxg">
+                                <rect key="frame" x="0.0" y="602" width="375" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dfgfdg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmA-Af-lQC">
+                                        <rect key="frame" x="8" y="3" width="359" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zmA-Af-lQC" secondAttribute="trailing" constant="8" id="2eY-ch-FsB"/>
+                                    <constraint firstAttribute="height" constant="25" id="SJC-rN-biJ"/>
+                                    <constraint firstItem="zmA-Af-lQC" firstAttribute="leading" secondItem="JdL-kw-kxg" secondAttribute="leading" constant="8" id="hnr-hA-H38"/>
+                                    <constraint firstItem="zmA-Af-lQC" firstAttribute="centerY" secondItem="JdL-kw-kxg" secondAttribute="centerY" id="lG6-sq-0jy"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please log in to start chatting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tl-qy-vlJ">
                                 <rect key="frame" x="57.5" y="320" width="260" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
@@ -727,17 +740,17 @@
                             <constraint firstAttribute="trailing" secondItem="vCh-4B-EFG" secondAttribute="trailing" id="12t-tj-Rzl"/>
                             <constraint firstItem="Lxb-Ky-wXr" firstAttribute="top" secondItem="Sbr-Cd-VZm" secondAttribute="bottom" id="3ay-8C-JbE"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="71S-lQ-Fog"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zmA-Af-lQC" secondAttribute="trailing" constant="20" symbolic="YES" id="G1Q-Pg-MY6"/>
+                            <constraint firstItem="JdL-kw-kxg" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="9Ge-gV-txM"/>
                             <constraint firstItem="b3O-dO-bfs" firstAttribute="centerY" secondItem="vCh-4B-EFG" secondAttribute="centerY" id="I2j-jz-yqG"/>
+                            <constraint firstItem="vCh-4B-EFG" firstAttribute="top" secondItem="Lxb-Ky-wXr" secondAttribute="bottom" id="Myq-LX-Cxb"/>
                             <constraint firstItem="z0B-QU-Ztz" firstAttribute="top" secondItem="vCh-4B-EFG" secondAttribute="bottom" id="PVt-wf-EzD"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="top" secondItem="ZYZ-Wg-93k" secondAttribute="top" id="R3Q-fH-Ile"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="trailing" secondItem="ZYZ-Wg-93k" secondAttribute="trailing" id="TKQ-eR-D1E"/>
-                            <constraint firstItem="vCh-4B-EFG" firstAttribute="top" secondItem="zmA-Af-lQC" secondAttribute="bottom" constant="6" id="WqT-Fi-Pmz"/>
-                            <constraint firstItem="zmA-Af-lQC" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" constant="8" id="dpd-gZ-nUh"/>
+                            <constraint firstAttribute="trailing" secondItem="JdL-kw-kxg" secondAttribute="trailing" id="VvR-RK-4Zz"/>
+                            <constraint firstItem="vCh-4B-EFG" firstAttribute="top" secondItem="JdL-kw-kxg" secondAttribute="bottom" id="abw-Nk-thN"/>
                             <constraint firstAttribute="trailing" secondItem="b3O-dO-bfs" secondAttribute="trailing" constant="8" id="eKl-ur-WgF"/>
                             <constraint firstItem="8Tl-qy-vlJ" firstAttribute="centerY" secondItem="ZYZ-Wg-93k" secondAttribute="centerY" id="ey6-A4-VbY"/>
                             <constraint firstItem="Lxb-Ky-wXr" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="i2n-Tb-f0B"/>
-                            <constraint firstItem="vCh-4B-EFG" firstAttribute="top" secondItem="Lxb-Ky-wXr" secondAttribute="bottom" constant="30" id="j9I-hj-Y2k"/>
                             <constraint firstItem="vCh-4B-EFG" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="jBs-gM-S0H"/>
                             <constraint firstItem="8Tl-qy-vlJ" firstAttribute="centerX" secondItem="ZYZ-Wg-93k" secondAttribute="centerX" id="wyP-U9-ZQX"/>
                             <constraint firstAttribute="trailing" secondItem="Lxb-Ky-wXr" secondAttribute="trailing" id="x5M-YN-u1k"/>
@@ -751,6 +764,7 @@
                         <outlet property="sendBtn" destination="b3O-dO-bfs" id="dN1-x9-lRG"/>
                         <outlet property="tableView" destination="Lxb-Ky-wXr" id="uca-cY-TFx"/>
                         <outlet property="typingLbl" destination="zmA-Af-lQC" id="heg-hm-tUi"/>
+                        <outlet property="typingLblView" destination="JdL-kw-kxg" id="HG3-eF-Vyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NtE-qR-ntU" userLabel="First Responder" sceneMemberID="firstResponder"/>
