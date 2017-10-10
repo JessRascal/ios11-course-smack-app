@@ -47,10 +47,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if newMessage.channelId == MessageService.instance.selectedChannel?._id && AuthService.instance.isLoggedIn {
                 MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
-                if MessageService.instance.messages.count > 0 {
-                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
-                }
+                self.scrollToLastMsg()
             }
         }
         
@@ -104,14 +101,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func channelSelected(_ notif: Notification) {
-        updateWithChannel()
+        updateWithChannelDetails()
     }
     
     @objc func handleTap() {
         view.endEditing(true)
     }
     
-    func updateWithChannel() {
+    func updateWithChannelDetails() {
         let channelName = MessageService.instance.selectedChannel?.name ?? ""
         channelNameLbl.text = "#\(channelName)"
         getMessages()
@@ -122,7 +119,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if success {
                 if MessageService.instance.channels.count > 0 {
                     MessageService.instance.selectedChannel = MessageService.instance.channels[0]
-                    self.updateWithChannel()
+                    self.updateWithChannelDetails()
                 } else {
                     self.channelNameLbl.text = "No Channels Available"
                 }
@@ -135,6 +132,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         MessageService.instance.getAllMessagesForChannel(channelId: channelID) { (success) in
             if success {
                 self.tableView.reloadData()
+                self.scrollToLastMsg()
             }
         }
     }
@@ -148,6 +146,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             channelNameLbl.text = "Smack"
             messageTextField.isEnabled = false
             sendBtn.isHidden = true
+        }
+    }
+    
+    func scrollToLastMsg() {
+        if MessageService.instance.messages.count > 0 {
+            let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+            self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
         }
     }
     
