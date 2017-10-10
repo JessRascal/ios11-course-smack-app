@@ -16,6 +16,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var typingLbl: UILabel!
+    @IBOutlet weak var infoLbl: UILabel!
     
     var isTyping = false
     
@@ -79,17 +80,21 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
         if AuthService.instance.isLoggedIn {
+            changeView(isLoggedIn: true)
             AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
             })
+        } else {
+            changeView(isLoggedIn: false)
         }
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
         if AuthService.instance.isLoggedIn {
+            changeView(isLoggedIn: true)
             onLoginGetMessages()
         } else {
-            channelNameLbl.text = "Please Log In"
+            changeView(isLoggedIn: false)
             tableView.reloadData()
         }
     }
@@ -130,6 +135,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func changeView(isLoggedIn: Bool) {
+        if isLoggedIn {
+            infoLbl.isHidden = true
+            messageTextField.isEnabled = true
+        } else {
+            infoLbl.isHidden = false
+            channelNameLbl.text = "Smack"
+            messageTextField.isEnabled = false
+            sendBtn.isHidden = true
+        }
+    }
+    
     @IBAction func sendMsgPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
             guard let channelId = MessageService.instance.selectedChannel?._id else { return }
@@ -138,6 +155,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if success {
                     self.messageTextField.text = ""
                     self.messageTextField.resignFirstResponder()
+//                    self.sendBtn.isHidden = true
                     SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
                 }
             })
