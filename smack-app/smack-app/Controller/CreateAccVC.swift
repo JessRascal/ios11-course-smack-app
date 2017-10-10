@@ -10,7 +10,6 @@ import UIKit
 
 class CreateAccVC: UIViewController {
     
-    
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -95,4 +94,5 @@ class CreateAccVC: UIViewController {
     @objc func handleTap() {
         view.endEditing(true)
     }
+    
 }

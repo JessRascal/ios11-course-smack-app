@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class AuthService {
-    
     static let instance = AuthService()
     
     let defaults = UserDefaults.standard
@@ -62,11 +61,11 @@ class AuthService {
     
     func loginUser(email: String, password: String, completion: @escaping CompletionHandler) {
         let lowercaseEmail = email.lowercased()
-        
         let body: [String: Any] = [
             "email": lowercaseEmail,
             "password": password
         ]
+        
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
@@ -87,7 +86,6 @@ class AuthService {
     }
     
     func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler) {
-        
         let lowercaseEmail = email.lowercased()
         let body: [String: Any] = [
             "name": name,

@@ -37,7 +37,6 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -106,7 +105,6 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
     @IBAction func loginBtnPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
             let profile = ProfileVC()
@@ -118,6 +116,5 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) { }
-    
     
 }

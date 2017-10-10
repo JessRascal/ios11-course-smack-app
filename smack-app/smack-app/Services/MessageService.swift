@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class MessageService {
-    
     static let instance = MessageService()
     
     var channels = [Channel]()
