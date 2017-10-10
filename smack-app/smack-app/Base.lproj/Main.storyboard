@@ -11,6 +11,7 @@
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
             <string>Avenir-Medium</string>
         </array>
     </customFonts>
@@ -485,7 +486,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s1H-77-lcP">
                                 <rect key="frame" x="107.5" y="28" width="160" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="K7E-9c-WLQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="K7E-9c-WLQ"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Dark"/>
@@ -628,35 +629,36 @@
                                                         <constraint firstAttribute="width" constant="50" id="m0r-rn-hyV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="JessRascal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-eb-wSF">
-                                                    <rect key="frame" x="70" y="8" width="86" height="25"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIk-tK-DmR">
-                                                    <rect key="frame" x="162" y="11" width="35.5" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09 Oct 22:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIk-tK-DmR">
+                                                    <rect key="frame" x="165.5" y="11" width="82" height="20"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwb-aA-C5F">
-                                                    <rect key="frame" x="70" y="41" width="285" height="17"/>
+                                                    <rect key="frame" x="70" y="33" width="285" height="27"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="JessRascal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-eb-wSF">
+                                                    <rect key="frame" x="70" y="8" width="87.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3Wq-dJ-Ety" firstAttribute="top" secondItem="2n3-Th-KUY" secondAttribute="topMargin" id="2vN-Yk-Rkk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Zwb-aA-C5F" secondAttribute="trailing" constant="12" id="5zV-Xr-oCw"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gIk-tK-DmR" secondAttribute="trailing" constant="20" symbolic="YES" id="7xY-WH-Ago"/>
                                                 <constraint firstItem="NaI-eb-wSF" firstAttribute="top" secondItem="3Wq-dJ-Ety" secondAttribute="top" id="9Ua-hz-Djh"/>
-                                                <constraint firstItem="Zwb-aA-C5F" firstAttribute="top" secondItem="NaI-eb-wSF" secondAttribute="bottom" constant="8" id="FDg-B1-XYc"/>
-                                                <constraint firstItem="gIk-tK-DmR" firstAttribute="leading" secondItem="NaI-eb-wSF" secondAttribute="trailing" constant="6" id="TS9-nQ-Out"/>
+                                                <constraint firstItem="Zwb-aA-C5F" firstAttribute="top" secondItem="NaI-eb-wSF" secondAttribute="bottom" id="FDg-B1-XYc"/>
+                                                <constraint firstItem="gIk-tK-DmR" firstAttribute="leading" secondItem="NaI-eb-wSF" secondAttribute="trailing" constant="8" id="TS9-nQ-Out"/>
                                                 <constraint firstItem="gIk-tK-DmR" firstAttribute="centerY" secondItem="NaI-eb-wSF" secondAttribute="centerY" id="bC6-Ue-0S2"/>
                                                 <constraint firstItem="3Wq-dJ-Ety" firstAttribute="leading" secondItem="2n3-Th-KUY" secondAttribute="leadingMargin" id="buN-1H-7al"/>
                                                 <constraint firstItem="NaI-eb-wSF" firstAttribute="leading" secondItem="3Wq-dJ-Ety" secondAttribute="trailing" constant="12" id="i60-qK-iTG"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Zwb-aA-C5F" secondAttribute="bottom" constant="14" id="sWf-X7-cAB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Zwb-aA-C5F" secondAttribute="bottom" constant="12" id="sWf-X7-cAB"/>
                                                 <constraint firstItem="Zwb-aA-C5F" firstAttribute="leading" secondItem="3Wq-dJ-Ety" secondAttribute="trailing" constant="12" id="zCu-p2-Xwe"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -681,6 +683,7 @@
                             <constraint firstAttribute="trailing" secondItem="vCh-4B-EFG" secondAttribute="trailing" id="12t-tj-Rzl"/>
                             <constraint firstItem="Lxb-Ky-wXr" firstAttribute="top" secondItem="Sbr-Cd-VZm" secondAttribute="bottom" id="3ay-8C-JbE"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="leading" secondItem="ZYZ-Wg-93k" secondAttribute="leading" id="71S-lQ-Fog"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zmA-Af-lQC" secondAttribute="trailing" constant="20" symbolic="YES" id="G1Q-Pg-MY6"/>
                             <constraint firstItem="b3O-dO-bfs" firstAttribute="centerY" secondItem="vCh-4B-EFG" secondAttribute="centerY" id="I2j-jz-yqG"/>
                             <constraint firstItem="z0B-QU-Ztz" firstAttribute="top" secondItem="vCh-4B-EFG" secondAttribute="bottom" id="PVt-wf-EzD"/>
                             <constraint firstItem="Sbr-Cd-VZm" firstAttribute="top" secondItem="ZYZ-Wg-93k" secondAttribute="top" id="R3Q-fH-Ile"/>

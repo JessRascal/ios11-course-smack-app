@@ -33,16 +33,16 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-EC-f0p">
-                    <rect key="frame" x="16" y="100" width="343" height="320"/>
+                    <rect key="frame" x="16" y="100" width="343" height="350"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbA-TE-G09">
-                            <rect key="frame" x="101.5" y="26" width="140.5" height="27.5"/>
+                            <rect key="frame" x="101.5" y="50" width="140.5" height="27.5"/>
                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                             <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="uFE-oV-nwu">
-                            <rect key="frame" x="46.5" y="104.5" width="250" height="91"/>
+                            <rect key="frame" x="46.5" y="119.5" width="250" height="91"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mI-Tx-6YC">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
@@ -81,7 +81,7 @@
                             </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly2-dl-Fip" customClass="RoundedButton" customModule="smack_app" customModuleProvider="target">
-                            <rect key="frame" x="46" y="250" width="250" height="50"/>
+                            <rect key="frame" x="46" y="280" width="250" height="50"/>
                             <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="250" id="K9n-Xx-E4f"/>
@@ -112,8 +112,8 @@
                         <constraint firstItem="Ly2-dl-Fip" firstAttribute="centerX" secondItem="PQI-EC-f0p" secondAttribute="centerX" id="3dM-Dc-0O4"/>
                         <constraint firstItem="Up7-Fb-kBt" firstAttribute="top" secondItem="PQI-EC-f0p" secondAttribute="topMargin" id="9SI-jS-bHe"/>
                         <constraint firstItem="uFE-oV-nwu" firstAttribute="centerY" secondItem="PQI-EC-f0p" secondAttribute="centerY" constant="-10" id="Cf4-9I-iDg"/>
-                        <constraint firstItem="YbA-TE-G09" firstAttribute="top" secondItem="PQI-EC-f0p" secondAttribute="top" constant="26" id="OCd-xF-kGy"/>
-                        <constraint firstAttribute="height" constant="320" id="PMP-HQ-Aim"/>
+                        <constraint firstItem="YbA-TE-G09" firstAttribute="top" secondItem="PQI-EC-f0p" secondAttribute="top" constant="50" id="OCd-xF-kGy"/>
+                        <constraint firstAttribute="height" constant="350" id="PMP-HQ-Aim"/>
                         <constraint firstAttribute="trailingMargin" secondItem="Up7-Fb-kBt" secondAttribute="trailing" id="XNK-zC-lFf"/>
                         <constraint firstItem="YbA-TE-G09" firstAttribute="centerX" secondItem="PQI-EC-f0p" secondAttribute="centerX" id="XkO-bc-vcU"/>
                         <constraint firstItem="uFE-oV-nwu" firstAttribute="centerX" secondItem="PQI-EC-f0p" secondAttribute="centerX" id="feI-20-jHI"/>

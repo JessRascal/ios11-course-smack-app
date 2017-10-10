@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,10 +34,10 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-Tn-vnk">
-                    <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                    <rect key="frame" x="20" y="158.5" width="335" height="350"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="I47-Te-PdQ">
-                            <rect key="frame" x="95.5" y="52" width="144" height="216.5"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="I47-Te-PdQ">
+                            <rect key="frame" x="95.5" y="50" width="144" height="210.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upi-f5-Xk9">
                                     <rect key="frame" x="43" y="0.0" width="58.5" height="27.5"/>
@@ -45,31 +46,36 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="h1X-AH-AoR" customClass="CircleImage" customModule="smack_app" customModuleProvider="target">
-                                    <rect key="frame" x="22" y="41.5" width="100.5" height="100"/>
+                                    <rect key="frame" x="22" y="39.5" width="100.5" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="hNt-cu-i52"/>
                                         <constraint firstAttribute="width" constant="100" id="niI-Aa-Z66"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JessRascal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XK-3P-a4E">
-                                    <rect key="frame" x="32.5" y="155.5" width="79.5" height="23.5"/>
+                                    <rect key="frame" x="32.5" y="151.5" width="79.5" height="23.5"/>
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jess@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-pd-zta">
-                                    <rect key="frame" x="0.0" y="193" width="144" height="23.5"/>
+                                    <rect key="frame" x="0.0" y="187" width="144" height="23.5"/>
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7F-M0-1uN">
-                            <rect key="frame" x="129.5" y="312" width="76" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7F-M0-1uN" customClass="RoundedButton" customModule="smack_app" customModuleProvider="target">
+                            <rect key="frame" x="42.5" y="280" width="250" height="50"/>
+                            <color key="backgroundColor" red="0.81960784313725488" green="0.28235294117647058" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1ZH-3t-yhH"/>
+                                <constraint firstAttribute="width" constant="250" id="9oP-5P-izZ"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                             <state key="normal" title="Log Out">
-                                <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="logOutPressed:" destination="-1" eventType="touchUpInside" id="R4J-ME-P9X"/>
@@ -85,13 +91,13 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="360" id="Y8b-5m-nRu"/>
+                        <constraint firstAttribute="height" constant="350" id="Y8b-5m-nRu"/>
                         <constraint firstItem="I47-Te-PdQ" firstAttribute="centerY" secondItem="R8F-Tn-vnk" secondAttribute="centerY" constant="-20" id="YYt-4l-4d1"/>
                         <constraint firstItem="e7F-M0-1uN" firstAttribute="centerX" secondItem="R8F-Tn-vnk" secondAttribute="centerX" id="iSa-FZ-orR"/>
                         <constraint firstItem="I47-Te-PdQ" firstAttribute="centerX" secondItem="R8F-Tn-vnk" secondAttribute="centerX" id="pZM-DI-JEf"/>
-                        <constraint firstItem="pnf-bx-XOD" firstAttribute="top" secondItem="R8F-Tn-vnk" secondAttribute="top" constant="8" id="sy1-iD-KCX"/>
-                        <constraint firstAttribute="trailing" secondItem="pnf-bx-XOD" secondAttribute="trailing" constant="8" id="tlG-Bd-hAp"/>
-                        <constraint firstAttribute="bottom" secondItem="e7F-M0-1uN" secondAttribute="bottom" constant="8" id="vZR-Ho-SNb"/>
+                        <constraint firstItem="pnf-bx-XOD" firstAttribute="top" secondItem="R8F-Tn-vnk" secondAttribute="topMargin" id="sy1-iD-KCX"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="pnf-bx-XOD" secondAttribute="trailing" id="tlG-Bd-hAp"/>
+                        <constraint firstAttribute="bottom" secondItem="e7F-M0-1uN" secondAttribute="bottom" constant="20" id="vZR-Ho-SNb"/>
                     </constraints>
                 </view>
             </subviews>
