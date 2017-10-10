@@ -26,11 +26,11 @@ class MessageService {
                     NotificationCenter.default.post(name: NOTIF_USER_CHANNELS_LOADED, object: nil)
                     completion(true)
                 } catch let err {
-                    debugPrint(err as Any)
+                    print(err as Any)
                     completion(false)
                 }
             } else {
-                debugPrint(response.result.error as Any)
+                print(response.result.error as Any)
                 completion(false)
             }
         }
@@ -43,14 +43,13 @@ class MessageService {
                 self.clearMessages()
                 do {
                     self.messages = try JSONDecoder().decode([Message].self, from: data)
-                    print("MESSAGES: \(self.messages)") // TODO: TESTING
                     completion(true)
                 } catch let err {
-                    debugPrint(err as Any)
+                    print(err as Any)
                     completion(false)
                 }
             } else {
-                debugPrint(response.result.error as Any)
+                print(response.result.error as Any)
                 completion(false)
             }
         }

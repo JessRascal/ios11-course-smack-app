@@ -54,7 +54,7 @@ class AuthService {
                 completion(true)
             } else {
                 completion(false)
-                debugPrint(response.result.error as Any)
+                print(response.result.error as Any)
             }
         }
     }
@@ -80,7 +80,7 @@ class AuthService {
                 completion(true)
             } else {
                 completion(false)
-                debugPrint(response.result.error as Any)
+                print(response.result.error as Any)
             }
         }
     }
