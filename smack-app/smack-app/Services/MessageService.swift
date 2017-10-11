@@ -18,6 +18,7 @@ class MessageService {
     var selectedChannel: Channel?
     
     func getAllChannels(completion: @escaping CompletionHandler) {
+        print("Getting all channels via MessageService...") // TODO: REMOVE
         Alamofire.request(URL_CHANNELS_GET, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HEADER_AUTH).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else { return }

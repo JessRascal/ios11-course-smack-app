@@ -11,6 +11,7 @@ import UIKit
 class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var addChannelBtn: UIButton!
     @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +22,8 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
+        
+        changeView(isLoggedIn: AuthService.instance.isLoggedIn)
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_USER_CHANNELS_LOADED, object: nil)
@@ -56,11 +59,21 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+            changeView(isLoggedIn: true)
         } else {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
             tableView.reloadData()
+            changeView(isLoggedIn: false)
+        }
+    }
+    
+    func changeView(isLoggedIn: Bool) {
+        if isLoggedIn {
+            addChannelBtn.isHidden = false
+        } else {
+            addChannelBtn.isHidden = true
         }
     }
     

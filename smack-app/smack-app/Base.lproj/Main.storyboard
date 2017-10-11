@@ -140,6 +140,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addChannelBtn" destination="vJ8-gj-kiS" id="qcA-pV-gd2"/>
                         <outlet property="loginBtn" destination="rrI-oT-GNY" id="TnW-LY-LT8"/>
                         <outlet property="tableView" destination="HcQ-uT-A58" id="vN1-39-BPC"/>
                         <outlet property="userImg" destination="HYw-ps-r7A" id="dRZ-Iu-rGW"/>
